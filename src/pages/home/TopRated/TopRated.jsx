@@ -4,7 +4,7 @@ import SwitchTabs from "../../../components/SwitchTabs/SwitchTabs";
 
 import useFetch from "../../../hooks/usefatch";
 
-function popular() {
+function TopRated() {
   const [endpoint, setEndpoint] = useState("movie");
 
   const { data, loading } = useFetch(`/${endpoint}/top_rated`);
@@ -16,7 +16,7 @@ function popular() {
   return (
     <div className="carouselSection">
       <div className="ContentWrapper">
-        <span className="carouselTitle">Popular</span>
+        <span className="carouselTitle">TopRated</span>
         <SwitchTabs data={["Movies", "TV Shows"]} onTabChange={onTabChange} />
       </div>
       {/* slider */}
@@ -25,4 +25,4 @@ function popular() {
   );
 }
 
-export default popular;
+export default TopRated;
