@@ -1,0 +1,86 @@
+.Casts {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  color: white;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 2rem;
+  margin-top: 6rem;
+  .carouselTitle {
+    width: 100%;
+    height: 25px;
+    color: #ffffff; /* White text color */
+    font-size: 18px; /* Adjust the font size to your preference */
+    font-weight: bold; /* Make the text bold for emphasis */
+    text-align: center; /* Center the text within the container */
+    margin-top: 10px;
+  }
+
+  .castWrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    // @include md {
+    //   flex-direction: row;
+    //   gap: 50px;
+    // }
+
+    .cast {
+      width: 100%;
+      max-width: 8rem;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+
+      gap: 10px;
+      .castImg {
+        border-radius: 50%;
+        width: 6rem;
+        height: 6rem;
+        object-position: center;
+      }
+      .castName {
+        white-space: nowrap;
+      }
+      .castCharacter {
+        border-radius: 50px;
+        font-weight: bolder;
+        color: rgb(139, 0, 58);
+        white-space: nowrap;
+      }
+    }
+  }
+  .button {
+    height: 2rem;
+    width: 2rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background: #3498db; /* Blue background color */
+    border-radius: 50%;
+    transition: background 0.3s ease; /* Adding a transition effect on background color */
+
+    &:hover {
+      background: #e74c3c; /* Darker shade of orange on hover */
+    }
+
+    .showAllButton {
+      cursor: pointer;
+      transition: color 0.3s ease; /* Adding a transition effect on color change */
+      color: #ffffff; /* White color for the icon */
+    }
+
+    .showAllButton:hover {
+      color: black; /* Orange color on hover */
+    }
+  }
+}

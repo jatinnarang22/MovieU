@@ -20,7 +20,7 @@ function TopRated() {
         <SwitchTabs data={["Movies", "TV Shows"]} onTabChange={onTabChange} />
       </div>
       {/* slider */}
-      <Slider data={data?.results} loading={loading} />
+      <Slider data={data?.results} loading={loading} endpoint={endpoint} />
     </div>
   );
 }

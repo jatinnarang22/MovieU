@@ -7,8 +7,11 @@ import useFetch from "../../../hooks/usefatch";
 function popular() {
   const [endpoint, setEndpoint] = useState("movie");
 
+  console.log(endpoint, "endpoint");
   const { data, loading } = useFetch(`/${endpoint}/popular`);
+  console.log(endpoint, "endpointj");
 
+  console.log(data, "data");
   const onTabChange = (tab) => {
     setEndpoint(tab === "Movies" ? "movie" : "tv");
   };
@@ -20,7 +23,7 @@ function popular() {
         <SwitchTabs data={["Movies", "TV Shows"]} onTabChange={onTabChange} />
       </div>
       {/* slider */}
-      <Slider data={data?.results} loading={loading} />
+      <Slider data={data?.results} loading={loading} endpoint={endpoint} />
     </div>
   );
 }
